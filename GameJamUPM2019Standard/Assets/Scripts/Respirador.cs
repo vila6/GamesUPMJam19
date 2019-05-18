@@ -9,7 +9,7 @@ public class Respirador : MonoBehaviour
     private float barraValue;
     private float breathingAxis;
     private float maxAmountOfOxigen=150f;
-    public int counterOfActualBarra=0;
+    public int counterOfActualBarra;
     public GameObject RojoContainer;
     public GameObject AzulContainer;
     private float activeRedChildren;
@@ -68,12 +68,9 @@ public class Respirador : MonoBehaviour
                 {
                     AzulContainer.transform.GetChild((-counterOfActualBarra)).gameObject.SetActive(false);
                 }
-                if(counterOfActualBarra==1)
-                {
-                    AzulContainer.transform.GetChild(counterOfActualBarra-1).gameObject.SetActive(false);
-                }
             }
         }
+        //Si no presionas
         else
         {
             if(oxigenAmount-barraValue>-150f)
@@ -96,10 +93,6 @@ public class Respirador : MonoBehaviour
                 if(counterOfActualBarra>0 ) 
                 {
                     RojoContainer.transform.GetChild(counterOfActualBarra).gameObject.SetActive(false);
-                }
-                if(counterOfActualBarra==-1)
-                {
-                    RojoContainer.transform.GetChild(counterOfActualBarra-1).gameObject.SetActive(false);
                 }
             }
         }

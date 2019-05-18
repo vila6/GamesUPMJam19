@@ -18,8 +18,9 @@ public class Respirador : MonoBehaviour
     public GameObject RespiracionFondo;
     private int activeRedChildren;
     private int activeBlueChildren;
-    public float timeThicc=0.2f;
+    public float timeThicc = 0.2f;
     private float fondoHeight;
+    private bool lastTimeTakingAir = false;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,13 @@ public class Respirador : MonoBehaviour
         breathingAxis=Input.GetAxis("Breath");
         if(breathingAxis!=0)
         {
+            // Si coges aire con el pulmon lleno es fallo
+            if(!lastTimeTakingAir && oxigenAmount > 0)
+            {
+                Failure();
+            }
+            lastTimeTakingAir = true;
+
             if(oxigenAmount + barraValue <= maxAmountOfOxigen)
             {
                 oxigenAmount += barraValue;   
@@ -67,6 +75,13 @@ public class Respirador : MonoBehaviour
         // Aire pa fuera (soltando boton)
         else
         {
+            // Si sueltas aire con el pulmon vacioes fallo 
+            if(lastTimeTakingAir && oxigenAmount < 0)
+            {
+                Failure();
+            }
+            lastTimeTakingAir = false;
+
             if(oxigenAmount-barraValue>=-maxAmountOfOxigen)
             {
                 oxigenAmount-=barraValue;
@@ -83,7 +98,7 @@ public class Respirador : MonoBehaviour
             }
         }
 
-        //Mira a ver que sacas en claro
+        // Si las barras llegan a los limites
         if(oxigenAmount <= -maxAmountOfOxigen || oxigenAmount >= maxAmountOfOxigen)
         {
             Failure();

@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 6.0F;
     public float jumpSpeed = 8.0F;
     public float gravity = 20.0F;
-    public float OnAirMovementFactor = 0.75f;
+    public float onAirMovementFactor = 0.75f;
 
     private CharacterController charController;
     private Vector3 moveDirection = Vector3.zero;
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 MovePlayerOnAir()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
-        Vector3 move = new Vector3(moveHorizontal * OnAirMovementFactor, 0, 0);
+        Vector3 move = new Vector3(moveHorizontal * onAirMovementFactor, 0, 0);
 
         return move;
     }

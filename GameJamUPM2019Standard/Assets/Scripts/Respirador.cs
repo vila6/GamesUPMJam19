@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 //Si quieres cambiar de tamaño de uno pequeño a uno mas grande tienes que reinstanciar el prefab y llamar al changeSize de ese nuevo objeto
 //El tamaño máximo es de 30 barras (30 azules y 30 rojas)
 public class Respirador : MonoBehaviour
@@ -21,19 +19,14 @@ public class Respirador : MonoBehaviour
     private int activeBlueChildren;
     public float timeThicc=0.2f;
     private float fondoHeight;
-    public float amountOfBarrasToChange=20f;
     private bool hasReachLimit;
 
     // Start is called before the first frame update
     void Start()
     {
         hasReachLimit=false;
-        InvokeRepeating("Breathing",2f,timeThicc);
-    }
-
-    // Update is called once per frame
-    void Update()
-    { 
+        InvokeRepeating("Breathing",0f,timeThicc);
+        ChangeSize(amountOfBarras);
     }
 
     void Breathing()
@@ -64,16 +57,9 @@ public class Respirador : MonoBehaviour
                 {
                     RojoContainer.transform.GetChild(activeRedChildren).gameObject.SetActive(true);
                 }
-                //NO BORRAR ESTOS COMENTARIOS, IMPORTANTE
-                //Si estas presionando y la barra esta en el ultimo rojo
-                // if(oxigenAmount>0 && oxigenAmount==maxAmountOfOxigen ) 
-                // {
-                //     RojoContainer.transform.GetChild(activeRedChildren).gameObject.SetActive(true);
-                // }
                 //Si estas presionando y la barra esta por debajo del 0
                 if(oxigenAmount <= 0) 
                 {
-                    Debug.Log(activeBlueChildren);
                     AzulContainer.transform.GetChild(activeBlueChildren - 1).gameObject.SetActive(false);
                 }
             }
@@ -89,12 +75,6 @@ public class Respirador : MonoBehaviour
                 {
                     AzulContainer.transform.GetChild(activeBlueChildren).gameObject.SetActive(true);
                 }
-                //NO BORRAR ESTOS COMENTARIOS, IMPORTANTE
-                //Si no estas presionando y la barra esta en el ultimo azul
-                // if(oxigenAmount<0 && -oxigenAmount==maxAmountOfOxigen ) 
-                // {
-                //     AzulContainer.transform.GetChild(activeBlueChildren).gameObject.SetActive(true);
-                // }
                 //Si esta sin presionar y la barra está por encima del cero
                 if(oxigenAmount >= 0) 
                 {
@@ -111,8 +91,19 @@ public class Respirador : MonoBehaviour
 
     }
 
-    void changeSize(float amountToChangeTo)
+    public void ChangeSize(float amountToChangeTo)
     {
+        if(amountToChangeTo > 30)
+        {
+            Debug.LogError("No se pue tanta barra");
+        }
+        else
+        {
+            float estimacionAOjoDelTamañoDeUnaBarra = 3.25f;
+            RespiracionFondo.GetComponent<RectTransform>().sizeDelta = new Vector2(RespiracionFondo.GetComponent<RectTransform>().sizeDelta.x , amountToChangeTo * estimacionAOjoDelTamañoDeUnaBarra);
+        }
+
+        /*
         CancelInvoke("Breathing");
         fondoHeight=RespiracionFondo.GetComponent<RectTransform>().rect.height;
         //Reinicio de
@@ -137,7 +128,7 @@ public class Respirador : MonoBehaviour
         amountOfBarras=amountToChangeTo;
         maxAmountOfOxigen=amountOfBarras*barraValue;
         InvokeRepeating("Breathing",2f,timeThicc);
-
+        */
     }
 
 }

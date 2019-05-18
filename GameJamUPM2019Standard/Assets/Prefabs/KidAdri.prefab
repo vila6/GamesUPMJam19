@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 5041598749357690398}
   - component: {fileID: 5041598749357690399}
   - component: {fileID: 5041598749357690369}
+  - component: {fileID: 6184421593079947782}
   - component: {fileID: 5041598749357690368}
   - component: {fileID: 5041598749357690371}
   - component: {fileID: 6323300224598599411}
   m_Layer: 0
   m_Name: KidAdri
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +100,22 @@ MonoBehaviour:
   jumpSpeed: 12
   gravity: 20
   onAirMovementFactor: 0.75
+--- !u!114 &6184421593079947782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041598749357690396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4d6404e0f914b4497a94cafa4e60ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oxigenAmount: 0
+  RojoContainer: {fileID: 0}
+  AzulContainer: {fileID: 0}
+  timeThicc: 0.2
 --- !u!143 &5041598749357690368
 CharacterController:
   m_ObjectHideFlags: 0

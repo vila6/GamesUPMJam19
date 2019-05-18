@@ -8,8 +8,9 @@ public class Respirador : MonoBehaviour
 {
     //max 150 y min -150
     public float oxigenAmount=0f;
-    public float amountOfBarras=30f;
-    private float barraValue=10f;
+    [Range(0,30)]
+    public int amountOfBarras = 30;
+    private float barraValue = 1f; // Y el premio, a la variable mas inutil, innecesaria y estupida, va para... esta variable \o/
     private float breathingAxis;
     private float maxAmountOfOxigen=150f;
     public GameObject RojoContainer;
@@ -19,12 +20,10 @@ public class Respirador : MonoBehaviour
     private int activeBlueChildren;
     public float timeThicc=0.2f;
     private float fondoHeight;
-    private bool hasReachLimit;
 
     // Start is called before the first frame update
     void Start()
     {
-        hasReachLimit=false;
         InvokeRepeating("Breathing",0f,timeThicc);
         ChangeSize(amountOfBarras);
     }
@@ -44,13 +43,14 @@ public class Respirador : MonoBehaviour
             if(AzulContainer.transform.GetChild(i).gameObject.activeSelf)
                 activeBlueChildren++;
         }
-        //Respiratorio
+
+        // Aire pa dentro (mantener pulsado)
         breathingAxis=Input.GetAxis("Breath");
         if(breathingAxis!=0)
         {
-            if(oxigenAmount+barraValue<=maxAmountOfOxigen)
+            if(oxigenAmount + barraValue <= maxAmountOfOxigen)
             {
-                oxigenAmount+=barraValue;   
+                oxigenAmount += barraValue;   
                 
                 //Si estas presionando y la barra está por encima del cero
                 if(oxigenAmount > 0) 
@@ -64,7 +64,7 @@ public class Respirador : MonoBehaviour
                 }
             }
         }
-        //Si no presionas
+        // Aire pa fuera (soltando boton)
         else
         {
             if(oxigenAmount-barraValue>=-maxAmountOfOxigen)
@@ -84,9 +84,9 @@ public class Respirador : MonoBehaviour
         }
 
         //Mira a ver que sacas en claro
-        if(-oxigenAmount==maxAmountOfOxigen || oxigenAmount==maxAmountOfOxigen)
+        if(oxigenAmount <= -maxAmountOfOxigen || oxigenAmount >= maxAmountOfOxigen)
         {
-            hasReachLimit=true;
+            Failure();
         }
 
     }
@@ -101,6 +101,7 @@ public class Respirador : MonoBehaviour
         {
             float estimacionAOjoDelTamañoDeUnaBarra = 3.25f;
             RespiracionFondo.GetComponent<RectTransform>().sizeDelta = new Vector2(RespiracionFondo.GetComponent<RectTransform>().sizeDelta.x , amountToChangeTo * estimacionAOjoDelTamañoDeUnaBarra);
+            maxAmountOfOxigen = amountOfBarras * barraValue;
         }
 
         /*
@@ -129,6 +130,11 @@ public class Respirador : MonoBehaviour
         maxAmountOfOxigen=amountOfBarras*barraValue;
         InvokeRepeating("Breathing",2f,timeThicc);
         */
+    }
+
+    private void Failure()
+    {
+        Debug.Log("La cagaste wee");
     }
 
 }

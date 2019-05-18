@@ -5,15 +5,14 @@ using UnityEngine;
 public class Respirador : MonoBehaviour
 {
     //max 150 y min -150
-    private float oxigenAmount=0f;
+    public float oxigenAmount=0f;
     private float barraValue;
     private float breathingAxis;
     private float maxAmountOfOxigen=150f;
-    public int counterOfActualBarra;
     public GameObject RojoContainer;
     public GameObject AzulContainer;
-    private float activeRedChildren;
-    private float activeBlueChildren;
+    private int activeRedChildren;
+    private int activeBlueChildren;
     public float timeThicc=0.2f;
 
     // Start is called before the first frame update
@@ -29,70 +28,66 @@ public class Respirador : MonoBehaviour
 
     void Breathing()
     {
-        barraValue=maxAmountOfOxigen/RojoContainer.transform.childCount;
-        activeBlueChildren=0;
-        activeRedChildren=0;
-        for(int i=0;i<RojoContainer.transform.childCount;i++)
-        {
-            if(RojoContainer.transform.GetChild(i).gameObject.activeSelf)
-                activeRedChildren++;
-        }
-        for(int i=0;i<AzulContainer.transform.childCount;i++)
-        {
-            if(AzulContainer.transform.GetChild(i).gameObject.activeSelf)
-                activeBlueChildren++;
-        }
+         barraValue=maxAmountOfOxigen/RojoContainer.transform.childCount;
+         activeBlueChildren=0;
+         activeRedChildren=0;
+         for(int i=0;i<RojoContainer.transform.childCount;i++)
+         {
+             if(RojoContainer.transform.GetChild(i).gameObject.activeSelf)
+                 activeRedChildren++;
+         }
+         for(int i=0;i<AzulContainer.transform.childCount;i++)
+         {
+             if(AzulContainer.transform.GetChild(i).gameObject.activeSelf)
+                 activeBlueChildren++;
+         }
         //Respiratorio
         breathingAxis=Input.GetAxis("Breath");
         if(breathingAxis!=0)
         {
-            if(oxigenAmount+barraValue<150f)
+            if(oxigenAmount+barraValue<=maxAmountOfOxigen)
             {
-                oxigenAmount+=barraValue;
-                if(counterOfActualBarra+1==0)
-                {
-                    counterOfActualBarra=1;
-                }
-                else
-                {
-                    counterOfActualBarra++;
-                }
+                oxigenAmount+=barraValue;   
                 
                 //Si estas presionando y la barra está por encima del cero
-                if(counterOfActualBarra>0) 
+                if(oxigenAmount>0 && oxigenAmount<maxAmountOfOxigen ) 
                 {
-                    RojoContainer.transform.GetChild(counterOfActualBarra-1).gameObject.SetActive(true);
+                    RojoContainer.transform.GetChild(activeRedChildren+1).gameObject.SetActive(true);
                 }
+                //NO BORRAR ESTOS COMENTARIOS, IMPORTANTE
+                //Si estas presionando y la barra esta en el ultimo rojo
+                // if(oxigenAmount>0 && oxigenAmount==maxAmountOfOxigen ) 
+                // {
+                //     RojoContainer.transform.GetChild(activeRedChildren).gameObject.SetActive(true);
+                // }
                 //Si estas presionando y la barra esta por debajo del 0
-                if(counterOfActualBarra<0 ) 
+                if(oxigenAmount<0 && -oxigenAmount<maxAmountOfOxigen ) 
                 {
-                    AzulContainer.transform.GetChild((-counterOfActualBarra)).gameObject.SetActive(false);
+                    AzulContainer.transform.GetChild(activeBlueChildren).gameObject.SetActive(false);
                 }
             }
         }
         //Si no presionas
         else
         {
-            if(oxigenAmount-barraValue>-150f)
+            if(oxigenAmount-barraValue>=-maxAmountOfOxigen)
             {
                 oxigenAmount-=barraValue;
-                if(counterOfActualBarra-1==0)
-                {
-                    counterOfActualBarra=-1;
-                }
-                else
-                {
-                    counterOfActualBarra--;
-                }
                 //Si estas sin presionar y la barra está por debajo del cero
-                if(counterOfActualBarra<0 )
+                if(oxigenAmount<0 && -oxigenAmount<maxAmountOfOxigen)
                 {
-                    AzulContainer.transform.GetChild((-counterOfActualBarra)-1).gameObject.SetActive(true);
+                    AzulContainer.transform.GetChild(activeBlueChildren+1).gameObject.SetActive(true);
                 }
+                //NO BORRAR ESTOS COMENTARIOS, IMPORTANTE
+                //Si no estas presionando y la barra esta en el ultimo azul
+                // if(oxigenAmount<0 && -oxigenAmount==maxAmountOfOxigen ) 
+                // {
+                //     AzulContainer.transform.GetChild(activeBlueChildren).gameObject.SetActive(true);
+                // }
                 //Si esta sin presionar y la barra está por encima del cero
-                if(counterOfActualBarra>0 ) 
+                if(oxigenAmount>0 && oxigenAmount!=maxAmountOfOxigen) 
                 {
-                    RojoContainer.transform.GetChild(counterOfActualBarra).gameObject.SetActive(false);
+                    RojoContainer.transform.GetChild(activeRedChildren).gameObject.SetActive(false);
                 }
             }
         }

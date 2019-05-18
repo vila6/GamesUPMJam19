@@ -1173,7 +1173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -498.40002, y: -253.4}
+  m_AnchoredPosition: {x: -384.7, y: -172}
   m_SizeDelta: {x: 100, y: 96}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &750728406
@@ -3629,6 +3629,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timeThicc
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742008241920175293, guid: 294d8d9906f551447bcc0107d9e781e4,
+        type: 3}
+      propertyPath: counterOfActualBarra
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 294d8d9906f551447bcc0107d9e781e4, type: 3}

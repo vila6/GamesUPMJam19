@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
 
         //Mueve al personaje
         controller.Move(moveDirection * Time.deltaTime);
+
+        
     }
 
     private Vector3 MovePlayer()

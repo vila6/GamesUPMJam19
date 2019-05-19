@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 893bd62a030abf044b1082cd46f8d603, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.8364557, g: 0.86221045, b: 0.870886, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -950,6 +950,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: tile pared pasillo (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.679516
@@ -998,18 +1010,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 837d88da6a416fc4daf94182ae7d7b50, type: 2}
-    - target: {fileID: 400000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
 --- !u!224 &219193746 stripped
@@ -1846,6 +1846,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: tile pared pasillo (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
       propertyPath: m_LocalPosition.x
       value: 49.879517
@@ -1894,18 +1906,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 837d88da6a416fc4daf94182ae7d7b50, type: 2}
-    - target: {fileID: 400000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 531917d32637bea428ac5c7048a7e891, type: 3}
 --- !u!1 &717062793 stripped
@@ -2291,7 +2291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &853918971
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3153,6 +3153,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mesa
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d97bd1ddfadd65743b48911c7466b62b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.32
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d97bd1ddfadd65743b48911c7466b62b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 47.158516
@@ -3201,10 +3205,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cf790b5dc0e64d74c9ad571262f48e1f, type: 2}
-    - target: {fileID: 400000, guid: d97bd1ddfadd65743b48911c7466b62b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.32
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d97bd1ddfadd65743b48911c7466b62b, type: 3}
 --- !u!1001 &1506521834
@@ -3217,6 +3217,18 @@ PrefabInstance:
     - target: {fileID: 100002, guid: d12c1e13642bdb547b56898feba7fbde, type: 3}
       propertyPath: m_Name
       value: tile suelo alfombra
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d12c1e13642bdb547b56898feba7fbde, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d12c1e13642bdb547b56898feba7fbde, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00000047684
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d12c1e13642bdb547b56898feba7fbde, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d12c1e13642bdb547b56898feba7fbde, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3261,18 +3273,6 @@ PrefabInstance:
     - target: {fileID: 400002, guid: d12c1e13642bdb547b56898feba7fbde, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d12c1e13642bdb547b56898feba7fbde, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d12c1e13642bdb547b56898feba7fbde, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.00000047684
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: d12c1e13642bdb547b56898feba7fbde, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: d12c1e13642bdb547b56898feba7fbde, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3752,10 +3752,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: f1b6e523a8c47e3479707d7e1d582fec, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9b96c84c74d5ee64d80c4115a82c5e7c, type: 2}
     - target: {fileID: 400002, guid: f1b6e523a8c47e3479707d7e1d582fec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -3764,6 +3760,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: f1b6e523a8c47e3479707d7e1d582fec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b96c84c74d5ee64d80c4115a82c5e7c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1b6e523a8c47e3479707d7e1d582fec, type: 3}
 --- !u!4 &1893937290 stripped

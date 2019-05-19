@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/_EscenaMinimaDeReferencia.unity
     guid: 7ee13c162ac22d74aa5ebd57587dfdb8
+  - enabled: 1
+    path: Assets/_Scenes/_Insti1.unity
+    guid: eace32233bc65834dac18ff0124b351d
   m_configObjects: {}

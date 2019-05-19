@@ -187,7 +187,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -283,4 +283,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29217f7baa7c39047a212f27bbedefb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepAudios: []
+  source: {fileID: 1547819228527303221}
+  stepAudios:
+  - {fileID: 8300000, guid: 2bbf186fdfa9f194994ae59b22a183d5, type: 3}
+  - {fileID: 8300000, guid: 0dd8ae85fa09f344481956962185b0ea, type: 3}
+  - {fileID: 8300000, guid: 8113adb1da20abe4286db9182ee31637, type: 3}
+  - {fileID: 8300000, guid: e68f9ada29680e24a92b9382b978ff8f, type: 3}
+  - {fileID: 8300000, guid: 3abc142ef86d7394083a0e7b19a5941b, type: 3}
+  chokeAudio: {fileID: 8300000, guid: c7b19de6589609342b8e2ad7872aaf3b, type: 3}

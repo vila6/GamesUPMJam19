@@ -185,6 +185,8 @@ public class Respirador : MonoBehaviour
 
     private void Failure(bool state)
     {
+        if (!isOnFailure)
+            GetComponent<AudioController>().PlayChokeAudio();
         playerController.StartFailureState();
         isOnFailure = true;
         failureWithFullPulmon = state; // Para saber si necesita(true) o le falta(false) aire
@@ -192,6 +194,7 @@ public class Respirador : MonoBehaviour
 
     private void Recovery()
     {
+        GetComponent<AudioController>().StopAudio();
         playerController.EndFailureState();
         isOnFailure = false;
     }

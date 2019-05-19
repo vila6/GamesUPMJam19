@@ -11424,11 +11424,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6184421593079947782, guid: 89f9a76e740a313438283f5e26107685,
         type: 3}
-      propertyPath: RespiracionFondo
-      value: 
-      objectReference: {fileID: 834551375}
-    - target: {fileID: 6184421593079947782, guid: 89f9a76e740a313438283f5e26107685,
-        type: 3}
       propertyPath: RojoContainer
       value: 
       objectReference: {fileID: 1445978732}
@@ -11439,14 +11434,9 @@ PrefabInstance:
       objectReference: {fileID: 1231714092}
     - target: {fileID: 6184421593079947782, guid: 89f9a76e740a313438283f5e26107685,
         type: 3}
-      propertyPath: timeThicc
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 6184421593079947782, guid: 89f9a76e740a313438283f5e26107685,
-        type: 3}
-      propertyPath: amountOfBarras
-      value: 20
-      objectReference: {fileID: 0}
+      propertyPath: RespiracionFondo
+      value: 
+      objectReference: {fileID: 834551375}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89f9a76e740a313438283f5e26107685, type: 3}
 --- !u!4 &1558211020 stripped

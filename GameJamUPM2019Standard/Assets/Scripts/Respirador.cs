@@ -21,6 +21,9 @@ public class Respirador : MonoBehaviour
     public float timeThicc = 0.2f;
     private float fondoHeight;
     private bool lastTimeTakingAir = false;
+    public PlayerController playerController;
+    private bool isOnFailure = false;
+    private bool failureWithFullPulmon;
 
     // Start is called before the first frame update
     void Start()
@@ -49,11 +52,19 @@ public class Respirador : MonoBehaviour
         breathingAxis=Input.GetAxis("Breath");
         if(breathingAxis!=0)
         {
-            // Si coges aire con el pulmon lleno es fallo
-            if(!lastTimeTakingAir && oxigenAmount > 0)
+            if(isOnFailure && (failureWithFullPulmon == false && oxigenAmount > 0))
             {
-                Failure();
+                Recovery();
             }
+            else
+            {
+                // Si coges aire con el pulmon lleno es fallo
+                if(!lastTimeTakingAir && oxigenAmount > 0)
+                {
+                    Failure(true);
+                }
+            }
+            
             lastTimeTakingAir = true;
 
             if(oxigenAmount + barraValue <= maxAmountOfOxigen)
@@ -75,11 +86,19 @@ public class Respirador : MonoBehaviour
         // Aire pa fuera (soltando boton)
         else
         {
-            // Si sueltas aire con el pulmon vacioes fallo 
-            if(lastTimeTakingAir && oxigenAmount < 0)
+            if(isOnFailure && (failureWithFullPulmon == true && oxigenAmount < 0))
             {
-                Failure();
+                Recovery();
             }
+            else
+            {
+                // Si sueltas aire con el pulmon vacio es fallo 
+                if(lastTimeTakingAir && oxigenAmount < 0)
+                {
+                    Failure(false);
+                }
+            }
+            
             lastTimeTakingAir = false;
 
             if(oxigenAmount-barraValue>=-maxAmountOfOxigen)
@@ -99,9 +118,13 @@ public class Respirador : MonoBehaviour
         }
 
         // Si las barras llegan a los limites
-        if(oxigenAmount <= -maxAmountOfOxigen || oxigenAmount >= maxAmountOfOxigen)
+        if(oxigenAmount <= -maxAmountOfOxigen)
         {
-            Failure();
+            Failure(false);
+        }
+        else if(oxigenAmount >= maxAmountOfOxigen)
+        {
+            Failure(true);
         }
 
     }
@@ -147,9 +170,17 @@ public class Respirador : MonoBehaviour
         */
     }
 
-    private void Failure()
+    private void Failure(bool state)
     {
-        Debug.Log("La cagaste wee");
+        playerController.StartFailureState();
+        isOnFailure = true;
+        failureWithFullPulmon = state; // Para saber si necesita(true) o le falta(false) aire
+    }
+
+    private void Recovery()
+    {
+        playerController.EndFailureState();
+        isOnFailure = false;
     }
 
 }

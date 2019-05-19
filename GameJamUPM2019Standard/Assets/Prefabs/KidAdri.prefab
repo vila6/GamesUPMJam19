@@ -113,9 +113,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oxigenAmount: 0
+  amountOfBarras: 20
   RojoContainer: {fileID: 0}
   AzulContainer: {fileID: 0}
-  timeThicc: 0.2
+  RespiracionFondo: {fileID: 0}
+  timeThicc: 0.03
+  playerController: {fileID: 5041598749357690369}
 --- !u!143 &5041598749357690368
 CharacterController:
   m_ObjectHideFlags: 0

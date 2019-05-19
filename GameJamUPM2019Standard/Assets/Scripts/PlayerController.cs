@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
     public void StartFailureState()
     {   
         onFailure = true;
-        moveDirection = Vector3.zero;
+        moveDirection = new Vector3(0, moveDirection.y, 0);
         if(myAnimator != null)
             myAnimator.SetBool("isDrowning", true);
     }

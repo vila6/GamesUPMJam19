@@ -8,7 +8,7 @@ public class StepsController : MonoBehaviour
 
     public void PlayRandomStep()
     {
-        GetComponent<AudioSource>().clip = stepAudios[Random.Range(0, stepAudios.Length)];
+        GetComponent<AudioSource>().clip = stepAudios[Random.Range(0, stepAudios.Length - 1)];
         GetComponent<AudioSource>().Play();
         Debug.Log("Playing step");
     }

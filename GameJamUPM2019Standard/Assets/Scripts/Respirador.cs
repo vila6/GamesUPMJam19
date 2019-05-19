@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //Si quieres cambiar de tamaño de uno pequeño a uno mas grande tienes que reinstanciar el prefab y llamar al changeSize de ese nuevo objeto
 //El tamaño máximo es de 30 barras (30 azules y 30 rojas)
@@ -26,18 +27,35 @@ public class Respirador : MonoBehaviour
     private bool failureWithFullPulmon;
     private bool levelStart = false;
     public TransicionEscenas imageTransicionEscenas;
+    public Text tutoText;
+    private bool toStartOnKeyDown;
 
     // Start is called before the first frame update
     void Start()
     {
         ChangeSize(amountOfBarras);
         Failure(false);
+        StartCoroutine(ActiveTuto());
+        toStartOnKeyDown = false;
+    }
+
+    private IEnumerator ActiveTuto()
+    {
+        yield return new WaitForSeconds(3);
+        if(!levelStart)
+            tutoText.enabled = true;
     }
 
     void Update()
     {
-        if(!levelStart && Input.GetAxis("Breath") != 0)
+        if(Input.GetAxis("Breath") == 0)
         {
+            toStartOnKeyDown = true;
+        }
+
+        if(toStartOnKeyDown && !levelStart && Input.GetAxis("Breath") != 0)
+        {
+            tutoText.enabled = false;
             Recovery();
             imageTransicionEscenas.StartLevel();
             levelStart = true;

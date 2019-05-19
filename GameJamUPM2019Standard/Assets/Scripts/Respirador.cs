@@ -168,6 +168,7 @@ public class Respirador : MonoBehaviour
         }
         else
         {
+            amountOfBarras = (int)amountToChangeTo;
             float estimacionAOjoDelTamañoDeUnaBarra = 3.25f;
             RespiracionFondo.GetComponent<RectTransform>().sizeDelta = new Vector2(RespiracionFondo.GetComponent<RectTransform>().sizeDelta.x , amountToChangeTo * estimacionAOjoDelTamañoDeUnaBarra);
             maxAmountOfOxigen = amountOfBarras * barraValue;

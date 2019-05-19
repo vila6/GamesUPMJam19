@@ -24,12 +24,25 @@ public class Respirador : MonoBehaviour
     public PlayerController playerController;
     private bool isOnFailure = false;
     private bool failureWithFullPulmon;
+    private bool levelStart = false;
+    public TransicionEscenas imageTransicionEscenas;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Breathing",0f,timeThicc);
         ChangeSize(amountOfBarras);
+        Failure(false);
+    }
+
+    void Update()
+    {
+        if(!levelStart && Input.GetAxis("Breath") != 0)
+        {
+            Recovery();
+            imageTransicionEscenas.StartLevel();
+            levelStart = true;
+            InvokeRepeating("Breathing",0f,timeThicc);
+        }        
     }
 
     void Breathing()

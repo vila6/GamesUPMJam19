@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44571608, g: 0.49542415, b: 0.57424796, a: 1}
+  m_IndirectSpecularColor: {r: 0.44571626, g: 0.49542457, b: 0.57424843, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15603,7 +15603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageTransicionEscenas: {fileID: 587496758}
-  nextSceneName: _EscenaMinimaDeReferencia
+  nextSceneName: _Metro1
 --- !u!1001 &982106991218466521
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,14 +8,27 @@ public class ImageEndGame : MonoBehaviour
     public AudioSource ventana;
     public AudioSource morirse;
     public GameObject barra;
+    public GameObject creditos;
+    public AudioSource playerAudioSource;
+    private bool endReached = false;
+
     void Start()
     {
         StartCoroutine(EndGame());
     }
 
+    void Update()
+    {
+        if(endReached && Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     private IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(0.5f);
+        playerAudioSource.volume = 0f;
+        yield return new WaitForSeconds(1.5f);
         ventana.Play();
         yield return new WaitForSeconds(4f);
         ventana.Stop();
@@ -28,5 +41,8 @@ public class ImageEndGame : MonoBehaviour
         }
         
         barra.SetActive(false);   
+        yield return new WaitForSeconds(5f);
+        creditos.SetActive(true);
+        endReached = true;
     }
 }

@@ -217,5 +217,4 @@ public class Respirador : MonoBehaviour
         playerController.EndFailureState();
         isOnFailure = false;
     }
-
 }

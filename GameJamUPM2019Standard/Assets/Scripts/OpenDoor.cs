@@ -12,6 +12,8 @@ public class OpenDoor : MonoBehaviour
         {
             this.GetComponent<Animator>().enabled = true;
             imageTransicionEscenas.EndLevel("_Calle1");
+            GetComponent<AudioSource>().time = 12.8f;
+            GetComponent<AudioSource>().Play();
         }
     }
 }

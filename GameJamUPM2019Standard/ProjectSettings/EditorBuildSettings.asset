@@ -20,4 +20,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/_Insti1.unity
     guid: eace32233bc65834dac18ff0124b351d
+  - enabled: 1
+    path: Assets/_Scenes/_Insti2.unity
+    guid: 24946fe6a8cc0d142ac8adc05faa3538
+  - enabled: 1
+    path: Assets/_Scenes/_Metro2.unity
+    guid: a0739bda807a5fa4583bdade8ca31e88
+  - enabled: 1
+    path: Assets/_Scenes/_Metro3.unity
+    guid: 5b1fe9fa50168b642a982dd2c22c99d2
+  - enabled: 1
+    path: Assets/_Scenes/_Clase1.unity
+    guid: 0336960250f7d9948999e67f6bd41330
+  - enabled: 1
+    path: Assets/_Scenes/_Casa2.unity
+    guid: ac2f88b6d7492a34c8cff14f509620cb
+  - enabled: 1
+    path: Assets/_Scenes/_Metro4.unity
+    guid: c75ed532a9a112543802cf66e4f2b672
+  - enabled: 1
+    path: Assets/_Scenes/_Calle2.unity
+    guid: a337a3c13dbbc8f46b935d79da90d56a
   m_configObjects: {}

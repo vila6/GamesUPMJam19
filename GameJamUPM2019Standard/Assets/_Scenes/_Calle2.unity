@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6348055, g: 0.6367941, b: 0.6409658, a: 1}
+  m_IndirectSpecularColor: {r: 0.63480544, g: 0.6367939, b: 0.6409655, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2089,6 +2089,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8194378207874604286, guid: 7850b613cb2dec4419676fe3a6c0b7cf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3769263066944768582, guid: 7850b613cb2dec4419676fe3a6c0b7cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2107,11 +2112,6 @@ PrefabInstance:
     - target: {fileID: 3769263066944768583, guid: 7850b613cb2dec4419676fe3a6c0b7cf,
         type: 3}
       propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8194378207874604286, guid: 7850b613cb2dec4419676fe3a6c0b7cf,
-        type: 3}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12370,7 +12370,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087458813}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.6537342, y: 1, z: 1}
@@ -15241,18 +15241,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: edificio
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.546
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.049
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.16
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -29.2
@@ -15308,6 +15296,18 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
       propertyPath: m_LocalScale.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.546
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.049
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
@@ -17233,18 +17233,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: edificio (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.546
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.049
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.16
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -89.7
@@ -17300,6 +17288,18 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
       propertyPath: m_LocalScale.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.546
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.049
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
@@ -17474,18 +17474,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: edificio (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.546
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.049
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.16
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20
@@ -17541,6 +17529,18 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
       propertyPath: m_LocalScale.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.546
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.049
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
@@ -21426,18 +21426,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: edificio (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.546
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.049
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.16
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 90
@@ -21493,6 +21481,18 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
       propertyPath: m_LocalScale.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.546
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.049
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
@@ -22415,18 +22415,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: edificio (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.546
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.049
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.16
-      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 54
@@ -22482,6 +22470,18 @@ PrefabInstance:
     - target: {fileID: 400002, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
       propertyPath: m_LocalScale.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.546
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.049
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61c7b5ab95964b14c9729be5b03c493f, type: 3}

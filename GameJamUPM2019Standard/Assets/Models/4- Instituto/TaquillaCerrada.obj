@@ -4,7 +4,7 @@
 o 
 
 # material
-mtllib taquilla cerrada.mtl
+mtllib TaquillaCerrada.mtl
 usemtl palette
 
 # normals
